@@ -253,6 +253,27 @@
             gap: 20px;
         }
 
+        .lang-switch {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            padding: 0 18px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            color: var(--text-primary);
+            background: rgba(37, 99, 235, 0.08);
+            border: 1px solid rgba(37, 99, 235, 0.22);
+            transition: var(--transition);
+        }
+
+        .lang-switch:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
         /* Hero Section */
         .hero {
             min-height: 100vh;
@@ -1474,6 +1495,7 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="nav-actions">
+                    <a href="ar.html" class="lang-switch" lang="ar">العربية</a>
                     <button class="theme-toggle" id="themeToggle" title="Toggle light/dark mode">
                         <i class="fas fa-moon"></i>
                     </button>
@@ -1505,7 +1527,7 @@
                         <div class="stat-label">Years Experience</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">12+</div>
+                        <div class="stat-number">13+</div>
                         <div class="stat-label">Years at UNHCR</div>
                     </div>
                     <div class="stat-item">
