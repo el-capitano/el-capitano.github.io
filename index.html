@@ -246,8 +246,15 @@
             font-weight: 700;
             display: flex;
             align-items: center;
+            gap: 6px;
             color: var(--text-primary);
             text-decoration: none;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 0.92;
         }
 
         .logo span {
@@ -255,7 +262,7 @@
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            margin-left: 6px;
+            margin-left: 0;
         }
 
         .logo i {
@@ -1696,7 +1703,7 @@
             <nav>
                 <a href="#home" class="logo">
                     <img id="me" src="https://media.licdn.com/dms/image/v2/D4D03AQGa__As6TfDig/profile-displayphoto-scale_400_400/B4DZlRKYWBH0Ag-/0/1758003300326?e=1775692800&v=beta&t=iQk4CNZZmKKwLE4xyxMkFB6z4s2t0rdPguWieb689n8" class="me" alt="Majed Khaznadar profile photo">
-                    Majed<span>Khaznadar</span>
+                    <span class="logo-text">Majed<span>Khaznadar</span></span>
                 </a>
                 <ul class="nav-links">
                     <li><a href="#home" class="active">Home</a></li>
