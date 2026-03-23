@@ -306,32 +306,40 @@
         }
 
         .theme-toggle {
-            display: flex;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            background: none;
-            border: none;
+            width: 44px;
+            min-height: 44px;
+            background: rgba(37, 99, 235, 0.08);
+            border: 1px solid rgba(37, 99, 235, 0.22);
+            border-radius: 999px;
             color: var(--text-primary);
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             cursor: pointer;
             z-index: 1001;
             transition: var(--transition);
-            margin-right: 20px;
         }
 
         .theme-toggle:hover {
             color: var(--primary);
-            transform: rotate(20deg);
+            transform: translateY(-2px);
         }
 
         .hamburger {
             display: none;
-            background: none;
-            border: none;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            min-height: 44px;
+            background: rgba(37, 99, 235, 0.08);
+            border: 1px solid rgba(37, 99, 235, 0.22);
+            border-radius: 999px;
             color: var(--text-primary);
-            font-size: 1.7rem;
+            font-size: 1.2rem;
             cursor: pointer;
             z-index: 1001;
+            transition: var(--transition);
         }
 
         .nav-actions {
@@ -349,6 +357,7 @@
             border-radius: 999px;
             text-decoration: none;
             font-weight: 700;
+            white-space: nowrap;
             color: var(--text-primary);
             background: rgba(37, 99, 235, 0.08);
             border: 1px solid rgba(37, 99, 235, 0.22);
@@ -369,6 +378,21 @@
             padding: 140px 0 100px;
             position: relative;
             overflow: hidden;
+        }
+
+        .hero-particle-network {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.9;
+            pointer-events: none;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 1;
         }
 
         .hero-content {
@@ -1421,48 +1445,61 @@
         }
 
         @media (max-width: 768px) {
+            nav {
+                gap: 14px;
+            }
+
             .hamburger {
-                display: block;
+                display: inline-flex;
             }
-            
+
             .nav-actions {
-                gap: 15px;
+                gap: 10px;
+                flex-shrink: 0;
             }
-            
-            .theme-toggle {
-                margin-right: 0;
+
+            .logo {
+                font-size: 1.7rem;
             }
-            
+
+            .logo i {
+                font-size: 1.85rem;
+            }
+
+            .lang-switch {
+                padding: 0 14px;
+                font-size: 0.92rem;
+            }
+
             .nav-links {
-                position: fixed;
-                top: 95px;
-                right: -100%;
+                position: absolute;
+                top: calc(100% + 14px);
+                right: 0;
+                left: 0;
+                display: none;
                 flex-direction: column;
+                gap: 18px;
                 background: var(--nav-bg);
-                width: 90%;
-                max-width: 380px;
-                height: calc(100vh - 95px);
-                padding: 50px 30px 40px;
+                padding: 22px;
                 transition: var(--transition);
-                box-shadow: -8px 0 35px rgba(0, 0, 0, 0.35);
-                border-radius: 28px 0 0 28px;
+                box-shadow: 0 18px 35px rgba(0, 0, 0, 0.28);
+                border-radius: 24px;
                 backdrop-filter: blur(15px);
-                border-left: 1px solid var(--border-color);
+                border: 1px solid var(--border-color);
                 z-index: 999;
-                overflow-y: auto;
             }
 
             /* Light mode mobile nav shadow */
             :root[data-theme="light"] .nav-links {
-                box-shadow: -8px 0 35px rgba(0, 0, 0, 0.15);
+                box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
             }
             
             .nav-links.active {
-                right: 0;
+                display: flex;
             }
             
             .nav-links li {
-                margin: 0 0 28px 0;
+                margin: 0;
                 text-align: left;
             }
             
@@ -1477,7 +1514,7 @@
             .hero p {
                 font-size: 1.18rem;
             }
-            
+
             .btn-container {
                 flex-direction: column;
             }
@@ -1546,6 +1583,15 @@
         }
 
         @media (max-width: 480px) {
+            .logo {
+                font-size: 1.45rem;
+            }
+
+            .lang-switch {
+                padding: 0 12px;
+                font-size: 0.86rem;
+            }
+
             .hero h1 {
                 font-size: 3.1rem;
             }
@@ -1651,6 +1697,7 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
+        <canvas class="hero-particle-network" aria-hidden="true"></canvas>
         <div class="container">
             <div class="hero-content">
 <!--                 <div class="hero-badge">
@@ -1765,7 +1812,7 @@
                     <p>Implemented application standards, maintained critical network infrastructure including LAN/WAN, servers, routers, and VHF/HF communication systems. Developed innovative software solutions and trained staff on secure communication tools.</p>
                 </div>
                 <div class="timeline-item">
-                    <h3>Technology Consultant & Council Member</h3>
+                    <h3>Technology Consultant</h3>
                     <span class="company"><img src="glg.png" width="80px" alt="GLG logo"> GLG (Gerson Lehrman Group)</span>
                     <span class="date">2011 - 2024 (12+ years)</span>
                     <p>Consulted for global Fortune 500 clients including Johnson & Johnson, Saudi Aramco, Alliance Data, EMC, Qatar Industries, Kuwait Finance House, Saudi Telecom, and major law firms on IT strategy, cybersecurity, and software development challenges across the MENA region.</p>
@@ -2034,6 +2081,154 @@
                 hamburger.querySelector('i').className = 'fas fa-bars';
             });
         });
+
+        function initHeroParticleNetwork() {
+            const hero = document.querySelector('.hero');
+            const canvas = hero ? hero.querySelector('.hero-particle-network') : null;
+            if (!hero || !canvas) return;
+
+            const context = canvas.getContext('2d');
+            if (!context) return;
+
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+            const particles = [];
+            const pointer = {
+                x: null,
+                y: null,
+                radius: 140
+            };
+            let animationFrameId = null;
+            let particleCount = 0;
+            let width = 0;
+            let height = 0;
+            let dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+            function syncTheme() {
+                const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+                return {
+                    dot: isLight ? 'rgba(37, 99, 235, 0.7)' : 'rgba(125, 211, 252, 0.75)',
+                    line: isLight ? 'rgba(37, 99, 235, 0.18)' : 'rgba(56, 189, 248, 0.2)',
+                    glow: isLight ? 'rgba(14, 165, 233, 0.08)' : 'rgba(14, 165, 233, 0.12)'
+                };
+            }
+
+            function resizeCanvas() {
+                const rect = hero.getBoundingClientRect();
+                width = rect.width;
+                height = rect.height;
+                dpr = Math.min(window.devicePixelRatio || 1, 2);
+                canvas.width = Math.floor(width * dpr);
+                canvas.height = Math.floor(height * dpr);
+                context.setTransform(1, 0, 0, 1, 0, 0);
+                context.scale(dpr, dpr);
+
+                particleCount = Math.max(28, Math.min(70, Math.floor((width * height) / 22000)));
+                particles.length = 0;
+
+                for (let i = 0; i < particleCount; i += 1) {
+                    particles.push({
+                        x: Math.random() * width,
+                        y: Math.random() * height,
+                        vx: (Math.random() - 0.5) * 0.45,
+                        vy: (Math.random() - 0.5) * 0.45,
+                        size: Math.random() * 1.8 + 1
+                    });
+                }
+            }
+
+            function draw() {
+                const theme = syncTheme();
+                context.clearRect(0, 0, width, height);
+
+                const glow = context.createRadialGradient(width * 0.5, height * 0.35, 0, width * 0.5, height * 0.35, Math.max(width, height) * 0.55);
+                glow.addColorStop(0, theme.glow);
+                glow.addColorStop(1, 'rgba(0, 0, 0, 0)');
+                context.fillStyle = glow;
+                context.fillRect(0, 0, width, height);
+
+                for (let i = 0; i < particles.length; i += 1) {
+                    const particle = particles[i];
+
+                    particle.x += particle.vx;
+                    particle.y += particle.vy;
+
+                    if (particle.x <= 0 || particle.x >= width) particle.vx *= -1;
+                    if (particle.y <= 0 || particle.y >= height) particle.vy *= -1;
+
+                    if (pointer.x !== null && pointer.y !== null) {
+                        const dx = pointer.x - particle.x;
+                        const dy = pointer.y - particle.y;
+                        const distance = Math.hypot(dx, dy);
+
+                        if (distance < pointer.radius && distance > 0) {
+                            const force = (pointer.radius - distance) / pointer.radius;
+                            particle.x -= (dx / distance) * force * 0.9;
+                            particle.y -= (dy / distance) * force * 0.9;
+                        }
+                    }
+
+                    context.beginPath();
+                    context.fillStyle = theme.dot;
+                    context.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+                    context.fill();
+
+                    for (let j = i + 1; j < particles.length; j += 1) {
+                        const other = particles[j];
+                        const dx = particle.x - other.x;
+                        const dy = particle.y - other.y;
+                        const distance = Math.hypot(dx, dy);
+                        const maxDistance = 130;
+
+                        if (distance < maxDistance) {
+                            context.beginPath();
+                            context.strokeStyle = theme.line.replace(/[\d.]+\)$/u, `${((1 - distance / maxDistance) * 0.9).toFixed(3)})`);
+                            context.lineWidth = 1;
+                            context.moveTo(particle.x, particle.y);
+                            context.lineTo(other.x, other.y);
+                            context.stroke();
+                        }
+                    }
+                }
+
+                animationFrameId = window.requestAnimationFrame(draw);
+            }
+
+            function start() {
+                if (animationFrameId || prefersReducedMotion.matches) return;
+                draw();
+            }
+
+            function stop() {
+                if (!animationFrameId) return;
+                window.cancelAnimationFrame(animationFrameId);
+                animationFrameId = null;
+                context.clearRect(0, 0, width, height);
+            }
+
+            hero.addEventListener('pointermove', (event) => {
+                const rect = hero.getBoundingClientRect();
+                pointer.x = event.clientX - rect.left;
+                pointer.y = event.clientY - rect.top;
+            });
+
+            hero.addEventListener('pointerleave', () => {
+                pointer.x = null;
+                pointer.y = null;
+            });
+
+            window.addEventListener('resize', resizeCanvas);
+            prefersReducedMotion.addEventListener('change', () => {
+                if (prefersReducedMotion.matches) {
+                    stop();
+                    return;
+                }
+                resizeCanvas();
+                start();
+            });
+
+            resizeCanvas();
+            start();
+        }
         
         // Form submission handling
         const contactForm = document.getElementById('contactForm');
@@ -2060,6 +2255,8 @@
         document.addEventListener('DOMContentLoaded', () => {
             // Set initial active link
             document.querySelector('.nav-links a[href="#home"]').classList.add('active');
+
+            initHeroParticleNetwork();
             
             // Animate hero elements with staggered delay
             const heroElements = document.querySelectorAll('.hero-content > *:not(.hero-badge)');
