@@ -1447,28 +1447,42 @@
         @media (max-width: 768px) {
             nav {
                 gap: 14px;
+                flex-wrap: wrap;
             }
 
             .hamburger {
                 display: inline-flex;
             }
 
+            #me {
+                width: 38px;
+                margin: 0 10px 0 0;
+                flex-shrink: 0;
+            }
+
             .nav-actions {
+                margin-left: auto;
                 gap: 10px;
                 flex-shrink: 0;
             }
 
             .logo {
-                font-size: 1.7rem;
-            }
-
-            .logo i {
-                font-size: 1.85rem;
+                min-width: 0;
+                font-size: 1.35rem;
+                line-height: 1.1;
             }
 
             .lang-switch {
-                padding: 0 14px;
-                font-size: 0.92rem;
+                min-height: 40px;
+                padding: 0 10px;
+                font-size: 0.8rem;
+            }
+
+            .theme-toggle,
+            .hamburger {
+                width: 40px;
+                min-height: 40px;
+                font-size: 1rem;
             }
 
             .nav-links {
@@ -1584,12 +1598,21 @@
 
         @media (max-width: 480px) {
             .logo {
-                font-size: 1.45rem;
+                font-size: 1.2rem;
+            }
+
+            .logo span {
+                display: none;
+            }
+
+            #me {
+                width: 34px;
+                margin-right: 8px;
             }
 
             .lang-switch {
-                padding: 0 12px;
-                font-size: 0.86rem;
+                padding: 0 9px;
+                font-size: 0.74rem;
             }
 
             .hero h1 {
