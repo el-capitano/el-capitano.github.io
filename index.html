@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -242,12 +243,17 @@
 
         .logo {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.1rem;
-            font-weight: 700;
+            font-size: 1.6rem;
+            font-weight: 800;
             display: flex;
             align-items: center;
+            gap: 14px;
             color: var(--text-primary);
             text-decoration: none;
+        }
+
+        .logo div {
+            line-height: 1.05;
         }
 
         .logo span {
@@ -255,13 +261,7 @@
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            margin-left: 6px;
-        }
-
-        .logo i {
-            color: var(--unhcr-blue);
-            margin-right: 8px;
-            font-size: 2.2rem;
+            margin-left: 0;
         }
 
         .nav-links {
@@ -1468,8 +1468,8 @@
 
             .logo {
                 min-width: 0;
-                font-size: 1.35rem;
-                line-height: 1.1;
+                gap: 10px;
+                font-size: 1.25rem;
             }
 
             .lang-switch {
@@ -1598,11 +1598,7 @@
 
         @media (max-width: 480px) {
             .logo {
-                font-size: 1.2rem;
-            }
-
-            .logo span {
-                display: none;
+                font-size: 1.1rem;
             }
 
             #me {
@@ -1696,7 +1692,7 @@
             <nav>
                 <a href="#home" class="logo">
                     <img id="me" src="https://media.licdn.com/dms/image/v2/D4D03AQGa__As6TfDig/profile-displayphoto-scale_400_400/B4DZlRKYWBH0Ag-/0/1758003300326?e=1775692800&v=beta&t=iQk4CNZZmKKwLE4xyxMkFB6z4s2t0rdPguWieb689n8" class="me" alt="Majed Khaznadar profile photo">
-                    Majed<span>Khaznadar</span>
+                    <div>Majed <span>Khaznadar</span></div>
                 </a>
                 <ul class="nav-links">
                     <li><a href="#home" class="active">Home</a></li>
@@ -1943,7 +1939,7 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Email</h4>
-                                <p><a href="mailto:hireme@majed.xyz">hireme@majed.xyz</a></p>
+                                <p><a href="/cdn-cgi/l/email-protection#7b1312091e161e3b161a111e1f55030201"><span class="__cf_email__" data-cfemail="b6dedfc4d3dbd3f6dbd7dcd3d298cecfcc">[email&#160;protected]</span></a></p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -1977,7 +1973,7 @@
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/majedkhaznadar/" target="_blank" rel="noopener noreferrer" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i><span class="sr-only">LinkedIn</span></a>
                         <a href="https://github.com/el-capitano" target="_blank" rel="noopener noreferrer" class="github" aria-label="GitHub"><i class="fab fa-github"></i><span class="sr-only">GitHub</span></a>
-                        <a href="mailto:hireme@majed.xyz" class="email" aria-label="Email"><i class="fas fa-envelope"></i><span class="sr-only">Email</span></a>
+                        <a href="/cdn-cgi/l/email-protection#7f17160d1a121a3f121e151a1b51070605" class="email" aria-label="Email"><i class="fas fa-envelope"></i><span class="sr-only">Email</span></a>
                     </div>
                     <div class="share-links">
                         <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fmajed.xyz%2F" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i> Share on LinkedIn</a>
@@ -2029,7 +2025,7 @@
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Navigation scroll behavior
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -2341,5 +2337,6 @@
             });
         });
     </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4895248632894e9d97fa113d9b073b8a","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
