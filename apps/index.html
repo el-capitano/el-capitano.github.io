@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Majed's Apps | Professional Software Solutions</title>
+    <meta name="description" content="Discover Majed's Apps - Professional software solutions including eGate (vehicle access), easyQ (crowd queuing), Attendify (employee attendance), Mango POS (point of sale), and Activos (asset management).">
+    <meta name="keywords" content="Majed's Apps, eGate, easyQ, Attendify, Mango POS, Activos, vehicle access system, crowd queuing system, employee attendance, POS system, asset management, inventory management, Lebanon software, mobile apps Lebanon">
+    <meta name="author" content="Majed Khaznadar">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="LB">
+    <meta name="geo.placename" content="Lebanon">
+    <link rel="canonical" href="https://majed.xyz/apps/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Majed's Apps">
+    <meta property="og:title" content="Majed's Apps | Professional Software Solutions">
+    <meta property="og:description" content="Professional software solutions for businesses: eGate, easyQ, Attendify, Mango POS, and Activos.">
+    <meta property="og:url" content="https://majed.xyz/apps/">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Majed's Apps">
+    <meta name="twitter:description" content="Professional software solutions for businesses in Lebanon">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://majed.xyz/apps/#website",
+          "url": "https://majed.xyz/apps/",
+          "name": "Majed's Apps",
+          "description": "Professional software solutions for businesses in Lebanon"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://majed.xyz/apps/#organization",
+          "name": "Majed's Apps",
+          "url": "https://majed.xyz/apps/",
+          "founder": {
+            "@type": "Person",
+            "name": "Majed Khaznadar"
+          }
+        },
+        {
+          "@type": "CollectionPage",
+          "@id": "https://majed.xyz/apps/#page",
+          "url": "https://majed.xyz/apps/",
+          "name": "Majed's Apps",
+          "description": "Professional software solutions including eGate, easyQ, Attendify, Mango POS, and Activos",
+          "isPartOf": {
+            "@id": "https://majed.xyz/apps/#website"
+          }
+        }
+      ]
+    }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0ea5e9;
+            --accent: #8b5cf6;
+            --dark: #0f172a;
+            --dark-800: #0a0f1d;
+            --dark-900: #050a14;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --light-gray: #cbd5e1;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --egate-color: #3b82f6;
+            --easyq-color: #10b981;
+            --attendify-color: #8b5cf6;
+            --mango-color: #f59e0b;
+            --activos-color: #ef4444;
+            --border-radius: 16px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--dark-900) 0%, var(--dark-800) 100%);
+            color: var(--light);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--light);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo i {
+            color: var(--primary);
+        }
+
+        .logo span {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        main {
+            padding: 40px 0 80px;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            color: var(--light-gray);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .app-card {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .app-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--app-color);
+            opacity: 0.8;
+        }
+
+        .app-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--app-color);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .app-card:hover .app-icon {
+            transform: scale(1.1);
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--app-color), rgba(255,255,255,0.1));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            transition: var(--transition);
+            font-size: 2.2rem;
+            color: white;
+        }
+
+        .app-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--light);
+        }
+
+        .app-card p {
+            color: var(--gray);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .app-card.egate { --app-color: var(--egate-color); }
+        .app-card.easyq { --app-color: var(--easyq-color); }
+        .app-card.attendify { --app-color: var(--attendify-color); }
+        .app-card.mango { --app-color: var(--mango-color); }
+        .app-card.activos { --app-color: var(--activos-color); }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--gray);
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .apps-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="https://majed.xyz/" class="logo">
+                <i class="fas fa-mobile-alt"></i>
+                <span>Majed's Apps</span>
+            </a>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h1>Professional <span>Software Solutions</span></h1>
+                <p>Innovative applications designed to streamline operations for businesses across Lebanon and the Middle East</p>
+            </section>
+
+            <div class="apps-grid">
+                <div class="app-card egate">
+                    <div class="app-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>eGate</h3>
+                    <p>In/out app for vehicles of staff members and visitors to any facility. Manage access control efficiently.</p>
+                </div>
+
+                <div class="app-card easyq">
+                    <div class="app-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>easyQ</h3>
+                    <p>Advanced crowd queuing system for managing customer flow and reducing wait times.</p>
+                </div>
+
+                <div class="app-card attendify">
+                    <div class="app-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Attendify</h3>
+                    <p>Advanced employees attendance system with clock-in/out, tracking, and reporting features.</p>
+                </div>
+
+                <div class="app-card mango">
+                    <div class="app-icon">
+                        <i class="fas fa-cash-register"></i>
+                    </div>
+                    <h3>Mango POS</h3>
+                    <p>Advanced point of sale system for retail shops and restaurants with inventory management.</p>
+                </div>
+
+                <div class="app-card activos">
+                    <div class="app-icon">
+                        <i class="fas fa-boxes-stacked"></i>
+                    </div>
+                    <h3>Activos</h3>
+                    <p>Advanced asset and inventory management system for tracking and organizing company resources.</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 <a href="https://majed.xyz/">Majed Khaznadar</a>. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
