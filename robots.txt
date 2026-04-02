@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://majed.xyz/sitemap.xml
+Sitemap: https://www.majed.xyz/sitemap.xml
