@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Majed's Apps | Professional Software Solutions</title>
     <meta name="description" content="Discover Majed's Apps - Professional software solutions including eGate (vehicle access), easyQ (crowd queuing), Attendify (employee attendance), Mango POS (point of sale), and Activos (asset management).">
-    <meta name="keywords" content="Majed's Apps, eGate, easyQ, Attendify, Mango POS, Activos, vehicle access system, crowd queuing system, employee attendance, POS system, asset management, inventory management, Lebanon software, mobile apps Lebanon">
+    <meta name="keywords" content="Majed's Apps, eGate, easyQ, Attendify, Mango POS, Activos, ezPlanner, vehicle access system, crowd queuing system, employee attendance, POS system, asset management, inventory management, mission planner, driver tracking, Lebanon software, mobile apps Lebanon">
     <meta name="author" content="Majed Khaznadar">
     <meta name="robots" content="index, follow">
     <meta name="geo.region" content="LB">
@@ -76,6 +76,7 @@
             --attendify-color: #8b5cf6;
             --mango-color: #f59e0b;
             --activos-color: #ef4444;
+            --ezplanner-color: #06b6d4;
             --border-radius: 16px;
             --transition: all 0.3s ease;
         }
@@ -184,7 +185,7 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: var(--app-color);
+            background: var(--app-color, #2563eb) !important;
             opacity: 0.8;
         }
 
@@ -231,6 +232,7 @@
         .app-card.attendify { --app-color: var(--attendify-color); }
         .app-card.mango { --app-color: var(--mango-color); }
         .app-card.activos { --app-color: var(--activos-color); }
+        .app-card.ezplanner { --app-color: var(--ezplanner-color); }
 
         footer {
             text-align: center;
@@ -317,6 +319,14 @@
                     </div>
                     <h3>Activos</h3>
                     <p>Advanced asset and inventory management system for tracking and organizing company resources.</p>
+                </div>
+
+                <div class="app-card ezplanner">
+                    <div class="app-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>ezPlanner</h3>
+                    <p>Missions planner, assign drivers to a mission with live tracking. Suitable for NGOs, International Organizations, and delivery companies.</p>
                 </div>
             </div>
         </main>
