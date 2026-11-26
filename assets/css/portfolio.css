@@ -1,0 +1,162 @@
+.portfolio-page main {
+    padding-top: 128px;
+    padding-bottom: 72px;
+}
+
+.portfolio-page .portfolio-intro {
+    padding: 0;
+    margin-bottom: 48px;
+}
+
+.portfolio-intro h1 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(2.75rem, 7vw, 4.75rem);
+    line-height: 1.05;
+    margin-bottom: 16px;
+}
+
+.portfolio-jump {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 20px;
+    margin-top: 24px;
+}
+
+.portfolio-jump a,
+.portfolio-link {
+    color: var(--text-primary);
+    text-underline-offset: 4px;
+    text-decoration-color: var(--secondary);
+}
+
+.portfolio-page .footer-portrait {
+    width: 45px;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.portfolio-jump a {
+    padding: 6px 0;
+}
+
+.portfolio-page :focus-visible {
+    outline: 2px solid var(--secondary);
+    outline-offset: 3px;
+}
+
+.portfolio-page .portfolio-category {
+    padding: 28px 0 40px;
+    scroll-margin-top: 96px;
+}
+
+.portfolio-category .section-title {
+    margin-bottom: 28px;
+}
+
+.portfolio-category .projects-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 0;
+}
+
+.portfolio-category .project-card {
+    padding: 0;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.portfolio-category .project-card:hover {
+    transform: none;
+}
+
+.portfolio-shot {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 16 / 10;
+    background: var(--bg-tertiary);
+    border-bottom: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.portfolio-shot img {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: contain;
+}
+
+.portfolio-shot:focus-visible {
+    outline-offset: -5px;
+}
+
+.portfolio-category .project-content {
+    padding: 22px;
+}
+
+.portfolio-category .project-content h3 {
+    margin-bottom: 4px;
+    color: var(--text-primary);
+    font-family: "Space Grotesk", sans-serif;
+    overflow-wrap: break-word;
+}
+
+.portfolio-category .project-content p {
+    color: var(--text-secondary);
+    margin-bottom: 0;
+}
+
+.portfolio-category .project-content .portfolio-type {
+    flex-grow: 0;
+    font-size: .875rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.portfolio-link {
+    align-self: flex-start;
+    margin-top: 16px;
+}
+
+@media (max-width: 1050px) {
+    .portfolio-category .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1080px) {
+    .portfolio-page .logo {
+        font-size: 1.3rem;
+    }
+
+    .portfolio-page .nav-links li {
+        margin-left: 12px;
+    }
+
+    .portfolio-page .nav-actions {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 620px) {
+    .portfolio-category .projects-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .portfolio-page .container {
+        width: 100%;
+    }
+
+    .portfolio-page .nav-actions {
+        gap: 8px;
+    }
+
+    .portfolio-page .logo {
+        font-size: clamp(1rem, 4vw, 1.25rem);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .portfolio-page .project-card {
+        transition: none;
+    }
+}

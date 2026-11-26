@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Majed Khaznadar</title>
+    <meta name="description" content="Software projects by Majed Khaznadar across commerce, fieldwork, media, security and infrastructure.">
+    <link rel="canonical" href="https://www.majed.xyz/portfolio.html">
+    <link rel="icon" type="image/jpeg" href="majed-khaznadar.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+    <link rel="stylesheet" href="assets/css/site.min.css">
+    <link rel="stylesheet" href="assets/css/portfolio.css">
+</head>
+<body class="portfolio-page">
+    <header>
+        <div class="container">
+            <nav aria-label="Main navigation">
+                <a href="index.html#home" class="logo">
+                    <img id="me" src="majed-khaznadar.jpg" class="me" alt="">
+                    <div>Majed <span>Khaznadar</span></div>
+                </a>
+                <ul class="nav-links" id="portfolio-nav">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#experience">Experience</a></li>
+                    <li><a href="portfolio.html" class="active" aria-current="page">Portfolio</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="ar.html" class="lang-switch" lang="ar">العربية</a>
+                    <button class="theme-toggle" type="button" aria-label="Toggle light or dark mode"><i class="fas fa-moon" aria-hidden="true"></i></button>
+                    <button class="hamburger" type="button" aria-label="Toggle navigation" aria-controls="portfolio-nav" aria-expanded="false"><i class="fas fa-bars" aria-hidden="true"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="portfolio-intro section-title" aria-labelledby="portfolio-title">
+            <h1 id="portfolio-title">Portfolio</h1>
+            <p>Software projects by Majed Khaznadar.</p>
+            <nav class="portfolio-jump" aria-label="Project categories">
+                <a href="#commerce">Commerce and hospitality</a>
+                <a href="#field">Fieldwork and mobility</a>
+                <a href="#media">Media and personal apps</a>
+                <a href="#tools">Security, infrastructure and data</a>
+            </nav>
+        </section>
+
+        <section class="portfolio-category" id="commerce" aria-labelledby="commerce-title">
+            <div class="section-title"><h2 id="commerce-title">Commerce and hospitality</h2></div>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <a class="portfolio-shot" href="assets/portfolio/tabletag.webp">
+                        <img src="assets/portfolio/tabletag.webp" alt="TableTag website showing a mobile QR menu and a tablet storefront" loading="lazy" decoding="async">
+                    </a>
+                    <div class="project-content">
+                        <h3>TableTag</h3>
+                        <p class="portfolio-type">QR menus and online stores</p>
+                        <p>Businesses can publish a multilingual QR menu with table-specific codes, dine-in ordering and delivery. Store Mode adds product variants, inventory, checkout, order management and customer accounts.</p>
+                        <a href="https://tabletag.app" class="portfolio-link">Visit TableTag</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <a class="portfolio-shot" href="assets/portfolio/booking.jpg">
+                        <img src="assets/portfolio/booking.jpg" alt="TableTag Booking homepage with a clinic appointment confirmation" loading="lazy" decoding="async">
+                    </a>
+                    <div class="project-content">
+                        <h3>TableTag Booking</h3>
+                        <p class="portfolio-type">Appointment scheduling</p>
+                        <p>Service businesses get branded booking pages in English and Arabic. Customers can book through the website, WhatsApp or Telegram, while staff manage availability, schedules and reminders in their own workspace.</p>
+                        <a href="https://booking.tabletag.app" class="portfolio-link">Visit TableTag Booking</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <a class="portfolio-shot" href="assets/portfolio/restopos.webp">
+                        <img src="assets/portfolio/restopos.webp" alt="RestoPOS takeaway order screen with menu categories and an open check" loading="lazy" decoding="async">
+                    </a>
+                    <div class="project-content">
+                        <h3>TableTag RestoPOS</h3>
+                        <p class="portfolio-type">Restaurant point of sale</p>
+                        <p>A Windows workstation for restaurant orders, kitchen service and payments. Staff can save drafts during a connection outage, then sync them and verify stock and prices before sending orders to the kitchen or collecting payment.</p>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <a class="portfolio-shot" href="assets/portfolio/mangopos.webp">
+                        <img src="assets/portfolio/mangopos.webp" alt="MangoPOS touch checkout with a product catalog and an open sale" loading="lazy" decoding="async">
+                    </a>
+                    <div class="project-content">
+                        <h3>MangoPOS</h3>
+                        <p class="portfolio-type">Retail point of sale and inventory</p>
+                        <p>A Laravel POS with touch and lookup checkout, Arabic and English interfaces, and USD/LBP pricing. The back office handles products, suppliers, purchase orders, stock movements and sales reports. A terminal API supports desktop and mobile clients.</p>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <a class="portfolio-shot" href="assets/portfolio/ezstore.webp">
+                        <img src="assets/portfolio/ezstore.webp" alt="ezStore retail checkout with the cashier PIN keypad" loading="lazy" decoding="async">
+                    </a>
+                    <div class="project-content">
+                        <h3>ezStore</h3>
+                        <p class="portfolio-type">Windows retail management</p>
+                        <p>A WPF and .NET 8 application backed by SQL Server. It combines checkout and refunds with stock management and PIN-based staff access.</p>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <a class="portfolio-shot" href="assets/portfolio/shopifypos.webp">
+                        <img src="assets/portfolio/shopifypos.webp" alt="Station POS demo register showing a product catalog and current cart" loading="lazy" decoding="async">
+                    </a>
+                    <div class="project-content">
+                        <h3>ShopifyPOS</h3>
+                        <p class="portfolio-type">Flutter retail register</p>
+                        <p>The project runs as Station POS in its local demo. It supports product and barcode search, held carts, discounts, manually recorded payments and receipt history. Sales and inventory counts persist locally in SQLite.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="portfolio-category" id="field" aria-labelledby="field-title">
+            <div class="section-title"><h2 id="field-title">Fieldwork and mobility</h2></div>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <a class="portfolio-shot" href="assets/portfolio/fieldplus.webp">
+                        <img src="assets/portfolio/fieldplus.webp" alt="FieldPlus operations dashboard with survey counts and a field visit map" loading="lazy" decoding="async">
+                    </a>
+                    <div class="project-content">
+                        <h3>FieldPlus</h3>
+                        <p class="portfolio-type">Offline field surveys and audits</p>
+                        <p>Field teams complete configurable forms, record GPS coordinates and attach photo evidence in a Kotlin Android app. An outbox queues offline submissions for sync. The PHP and MySQL web admin manages forms and reviews incoming submissions.</p>
+                        <a href="https://github.com/el-capitano/FieldPlus" class="portfolio-link">View FieldPlus on GitHub</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3>HiWay</h3>
+                        <p class="portfolio-type">On-device vehicle observation</p>
+                        <p>Designed for law enforcement agencies, HiWay is a native Android app that uses CameraX and bundled models to detect and read license plates offline. It supports manual and mounted capture, a Lebanese plate profile, searchable evidence and CSV or JPEG exports.</p>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <a class="portfolio-shot" href="assets/portfolio/vflow.jpg">
+                        <img src="assets/portfolio/vflow.jpg" alt="ValetFlow public operator sign-in screen" loading="lazy" decoding="async">
+                    </a>
+                    <div class="project-content">
+                        <h3>vFlow parking management system</h3>
+                        <p class="portfolio-type">Valet operations</p>
+                        <p>vFlow, also called ValetFlow, is a web console for managing valet parking operations. The operator portal is available in English and Arabic and uses WhatsApp to send notifications.</p>
+                        <a href="https://vflow.majed.xyz" class="portfolio-link">Open ValetFlow</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="portfolio-category" id="media" aria-labelledby="media-title">
+            <div class="section-title"><h2 id="media-title">Media and personal apps</h2></div>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <a class="portfolio-shot" href="assets/portfolio/shorty.webp">
+                        <img src="assets/portfolio/shorty.webp" alt="Shorty Studio showing a vertical sample clip, timeline and editing controls" loading="lazy" decoding="async">
+                    </a>
+                    <div class="project-content">
+                        <h3>Shorty</h3>
+                        <p class="portfolio-type">Windows video editor (in development)</p>
+                        <p>Shorty Studio turns long recordings into short clips. Offline Whisper transcription helps find candidate moments. The WPF editor supports trimming, reframing, caption editing and batch MP4 and SRT export through FFmpeg.</p>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <a class="portfolio-shot" href="assets/portfolio/brando.jpg">
+                        <img src="assets/portfolio/brando.jpg" alt="Brando editor with its canvas and timeline" loading="lazy" decoding="async">
+                    </a>
+                    <div class="project-content">
+                        <h3>Brando</h3>
+                        <p class="portfolio-type">Screenshot and graphic editor (in development)</p>
+                        <p>A web studio for turning screenshots into branded graphics. It provides device frames, annotation layers, social previews and a motion timeline for creating animated assets.</p>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <a class="portfolio-shot" href="assets/portfolio/majedcinema.webp">
+                        <img src="assets/portfolio/majedcinema.webp" alt="MajedCinema movie catalog with search, genre filters and poster cards" loading="lazy" decoding="async">
+                    </a>
+                    <div class="project-content">
+                        <h3>MajedCinema</h3>
+                        <p class="portfolio-type">Cross-platform media app</p>
+                        <p>MajedCinema runs on Windows, macOS, Linux, the web, TVs and PlayStation consoles. Its remote-friendly interface lets viewers browse and search movies and series, select seasons and episodes, and control playback with directional navigation, pause and seek.</p>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <a class="portfolio-shot" href="assets/portfolio/tallymate.webp">
+                        <img src="assets/portfolio/tallymate.webp" alt="TallyMate Arabic welcome screen" loading="lazy" decoding="async">
+                    </a>
+                    <div class="project-content">
+                        <h3>TallyMate</h3>
+                        <p class="portfolio-type">Mobile tally counter</p>
+                        <p>A Flutter app for counting repeated phrases. Users can pick from predefined Arabic tallies, save favorites and increment the count with a large tap target. The Arabic interface is right-to-left.</p>
+                        <a href="https://play.google.com/store/apps/details?id=com.khaznadar.tallymate" class="portfolio-link">Get TallyMate on Google Play</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <a class="portfolio-shot" href="assets/portfolio/icompare.jpg">
+                        <img src="assets/portfolio/icompare.jpg" alt="iCompare search with product matching and the shop registry" loading="lazy" decoding="async">
+                    </a>
+                    <div class="project-content">
+                        <h3>iCompare</h3>
+                        <p class="portfolio-type">Cross-store price comparison</p>
+                        <p>A Next.js product comparison tool that matches listings across shops. It organizes offers in a comparison ledger and includes a watchlist and price history.</p>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <a class="portfolio-shot" href="assets/portfolio/tagger.webp">
+                        <img src="assets/portfolio/tagger.webp" alt="Tagger mobile camera view with a recognized face, name and role" loading="lazy" decoding="async">
+                    </a>
+                    <div class="project-content">
+                        <h3>Tagger</h3>
+                        <p class="portfolio-type">Live camera face tagging</p>
+                        <p>Tagger displays a name and role beside a recognized face in its live camera view. The interface shows a count of recognized faces, lets users switch between front and rear cameras, and supports full-screen viewing.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="portfolio-category" id="tools" aria-labelledby="tools-title">
+            <div class="section-title"><h2 id="tools-title">Security, infrastructure and data</h2></div>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <a class="portfolio-shot" href="assets/portfolio/cyberscope.jpg">
+                        <img src="assets/portfolio/cyberscope.jpg" alt="CyberScope landing page before a scan" loading="lazy" decoding="async">
+                    </a>
+                    <div class="project-content">
+                        <h3>CyberScope</h3>
+                        <p class="portfolio-type">Website security assessment</p>
+                        <p>A Python and FastAPI app for reviewing authorized websites. It brings findings such as weak security headers, cookie settings and outdated components into a report with remediation guidance.</p>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3>RemoteBridge</h3>
+                        <p class="portfolio-type">Experimental remote desktop</p>
+                        <p>A Windows host and Flutter mobile client stream a desktop and send input over WebRTC. Devices can pair directly on a private LAN with approval on the host. A Go signaling service supports the server-based setup.</p>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <a class="portfolio-shot" href="assets/portfolio/harvestpro.webp">
+                        <img src="assets/portfolio/harvestpro.webp" alt="HarvestPro visual configuration editor with a page preview and extraction settings" loading="lazy" decoding="async">
+                    </a>
+                    <div class="project-content">
+                        <h3>HarvestPro</h3>
+                        <p class="portfolio-type">Structured data extraction</p>
+                        <p>A Python scaffold for extracting structured datasets from websites. It batches requests with retries and per-host throttling, optionally renders JavaScript, validates records and exports JSON, CSV, JSONL or Excel.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img class="footer-portrait" src="majed-khaznadar.jpg" alt="">
+                    Majed<span>Khaznadar</span>
+                </div>
+                <p class="tagline">IT Expert • Full-Stack Developer • Cybersecurity Specialist • Building technology that serves humanity</p>
+                <p><a href="https://www.seobility.net/en/seocheck/check?url=https%3A%2F%2Fmajed.xyz%2F" target="_blank" rel="noopener noreferrer"><img src="https://app.seobility.net/widget/widget.png?url=https%3A%2F%2Fmajed.xyz%2F" alt="Seobility Score for majed.xyz"></a></p>
+                <div class="copyright">
+                    <p>&copy; 2026 Majed Khaznadar. All rights reserved. | Humanitarian Technologist based in Lebanon</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.querySelector('.theme-toggle');
+        const menuToggle = document.querySelector('.hamburger');
+        const menu = document.querySelector('#portfolio-nav');
+        const header = document.querySelector('header');
+
+        function updateHeader() {
+            header.classList.toggle('scrolled', window.scrollY > 100);
+        }
+
+        updateHeader();
+        window.addEventListener('scroll', updateHeader, { passive: true });
+
+        function applyTheme(theme) {
+            document.documentElement.dataset.theme = theme;
+            themeToggle.firstElementChild.className = theme === 'light' ? 'fas fa-sun' : 'fas fa-moon';
+            themeToggle.setAttribute('aria-pressed', String(theme === 'light'));
+        }
+
+        applyTheme(localStorage.getItem('theme') === 'light' ? 'light' : 'dark');
+        themeToggle.addEventListener('click', () => {
+            const theme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+            localStorage.setItem('theme', theme);
+            applyTheme(theme);
+        });
+
+        menuToggle.addEventListener('click', () => {
+            const open = menu.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', String(open));
+            menuToggle.firstElementChild.className = open ? 'fas fa-times' : 'fas fa-bars';
+        });
+    </script>
+</body>
+</html>
