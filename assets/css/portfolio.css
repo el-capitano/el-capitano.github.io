@@ -89,6 +89,12 @@
     outline-offset: -5px;
 }
 
+.portfolio-caption {
+    padding: 6px 22px 0;
+    color: var(--text-secondary);
+    font-size: .8rem;
+}
+
 .portfolio-category .project-content {
     padding: 22px;
 }
